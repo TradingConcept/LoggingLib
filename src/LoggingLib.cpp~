@@ -1,0 +1,14 @@
+#include "LoggingLib.hpp"
+
+void LoggingLib::Log(std::strstream)
+{
+  
+}
+
+void LoggingLib::void Erro(rstd::strstream)
+{
+}
+
+void LoggingLib:: Info(std::strstream)
+{
+}
