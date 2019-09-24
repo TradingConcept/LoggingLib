@@ -4,9 +4,8 @@ class Logging
 {
 
 public:
-  static void Debug(const std::string&);
-  static void Info(const std::string&);
-  static void Warn(const std::string&);
-  static void Error(const std::string&);
-  
+  void Debug(const std::string&);
+  void Info(const std::string&);
+  void Warn(const std::string&);
+  void Error(const std::string&);
 };
