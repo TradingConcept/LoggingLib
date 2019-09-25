@@ -1,11 +1,16 @@
 #include <iostream>
+#include <sstream>
 
 class Logging
 {
 
+  static void Log(const std::string& stream, const std::string& type);
+  
 public:
-  void Debug(const std::string&);
-  void Info(const std::string&);
-  void Warn(const std::string&);
-  void Error(const std::string&);
+  
+  static void Debug(const std::string &);
+  static void Info(const std::string &);
+  static void Info(const std::stringstream &);
+  static void Warn(const std::string &);
+  static void Error(const std::string &);
 };
