@@ -1,2 +1,4 @@
 build
-CMakeFile
+CMakeFiles
+CMakeCache.txt
+.vscode

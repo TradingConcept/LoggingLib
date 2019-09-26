@@ -12,10 +12,18 @@ void Logging::Log(const std::string &stream, const std::string &type)
   std::cout << now << type << stream << std::endl;
 }
 
+
 void Logging::Debug(const std::string &stream)
 {
   auto dummy = std::async(Logging::Log, stream, " [DEBUG] ");
 }
+
+void Logging::Debug(const std::stringstream &stream)
+{
+  Logging::Debug(stream.str());
+}
+
+
 
 void Logging::Info(const std::string &stream)
 {
@@ -27,12 +35,28 @@ void Logging::Info(const std::stringstream &stream)
   Logging::Info(stream.str());
 }
 
+
+
 void Logging::Warn(const std::string &stream)
 {
   Logging::Log(stream, " [WARN] ");
 }
 
+void Logging::Warn(const std::stringstream &stream)
+{
+  Logging::Warn(stream.str());
+}
+
+
+
+
 void Logging::Error(const std::string &stream)
 {
   Logging::Log(stream, " [ERROR] ");
 }
+
+void Logging::Error(const std::stringstream &stream)
+{
+  Logging::Error(stream.str());
+}
+
